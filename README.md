@@ -1,4 +1,4 @@
-# Pizza Sales Analysis (SQL & Power BI)
+# Pizza Sales Analysis using SQL & Power BI
 ## Problem Statement
 This project focuses on an in-depth analysis of pizza sales data from a fictional pizzeria for the year 2015. The pizzeria offers a variety of pizza flavors. The goal is to understand customer preferences and peak sales periods to improve sales strategies and enhance customer satisfaction. As a data analyst at the company, my task was to analyze key indictors for pizza sales data to gain insights into business performance. 
 
@@ -25,7 +25,7 @@ Insights and recommendations are provided on the following key indicators:
 - **Total Orders:** The total number of orders placed.
 - **Avergae Pizzas Per Order:** The average number of pizzas sold per order, calculated by dividing the total number of pizzas sold by the total number of orders. 
 
-## Charts 
+## Visualizations
 Part of the task is to visualize various aspects of our pizza sales data to gain insights and understand key trends: The following chart ideas have been identified:
 - **Daily Trend for Total Orders:** A bar chart that displays the daily trend of total orders over a specific time period. This chart will help identify any patterns or fluctuations in order volumes on a daily basis.
 - **Monthly Trend for Total Orders:** A line chart that illustrates the monthly trend of total orders throughout the day. This chart will allow us identify peak months or periods of high order activity. 
