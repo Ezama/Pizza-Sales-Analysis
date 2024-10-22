@@ -1,6 +1,6 @@
 # Pizza Sales Analysis using SQL & Power BI
 ## Problem Statement
-This project focuses on an in-depth analysis of pizza sales data from a fictional pizzeria for the year 2015. The pizzeria offers a variety of pizza flavors. The goal is to understand customer preferences and peak sales periods to improve sales strategies and enhance customer satisfaction. As a data analyst at the company, my task was to analyze key indictors for pizza sales data to gain insights into business performance. 
+This project focuses on an in-depth analysis of pizza sales data from a fictional pizzeria for the year 2015. The pizzeria offers a variety of pizza flavors. As a data analyst at the company, the main objective of the project was to generate insights that can inform decision-making on menu improvements, marketing strategies, and operational efficiencies. I used SQL to manipulate and query the data and created an interactive Power BI dashboard.
 
 ## Data Structure 
 The company’s main database consists of one primary table, which contains essential order and product information. The list of columns is as follows: 
@@ -10,74 +10,84 @@ The company’s main database consists of one primary table, which contains esse
 - **quantity:** Quantity of pizzas ordered
 - **order_date:** Date when the order was placed
 - **order_time:** Time when the order was placed
-- **unit_price:** Price per unit of pizza
-- **total_price:** Total price for the order
+- **unit_price:** Price per unit of pizza in dollars
+- **total_price:** Total price for the order in dollars
 - **pizza_size:** Size of the pizza (e.g. M, L, etc.)
 - **pizza_category:** Category of the pizza (e.g. Classic, Veggie, etc.)
 - **pizza_ingredients:** Ingredients included in the pizza
 - **pizza_name:** Name of the pizza
 
+## KPIs
 Insights and recommendations are provided on the following key indicators:
-
 - **Total Revenue:** The sum of the total price of all pizza orders. 
 - **Average Order Value (AOV):** The average amount spent per order, calculated by dividing the total revenue by the total number of orders. 
 - **Total Pizzas Sold:** The sum of the quantities of all pizzas sold. 
 - **Total Orders:** The total number of orders placed.
-- **Avergae Pizzas Per Order:** The average number of pizzas sold per order, calculated by dividing the total number of pizzas sold by the total number of orders. 
-
-## Visualizations
-Part of the task is to visualize various aspects of our pizza sales data to gain insights and understand key trends: The following chart ideas have been identified:
-- **Daily Trend for Total Orders:** A bar chart that displays the daily trend of total orders over a specific time period. This chart will help identify any patterns or fluctuations in order volumes on a daily basis.
-- **Monthly Trend for Total Orders:** A line chart that illustrates the monthly trend of total orders throughout the day. This chart will allow us identify peak months or periods of high order activity. 
-- **Percentage of Sales by Pizza Category:** A pie chart that shows the distribution of sales across different pizza categories. This chart will provide insights into the popularity of various pizza categories and their contribution to overall sales. 
-- **Percentage of Sales by Pizza Size:** A pie chart that represents the percentage of sales attributed to different pizza sizes. This chart will help us understand customer preferences for pizza sizes and their impact on sales. 
-- **Total Pizzas Sold by Pizza Category:** A funnel chart that presents the total number of pizzas sold for ech pizza category. This chart will aloows us to compare the sales performance of different pizza categories.
-- **Top 5 Best Sellers by Revenue, Total Quantity, and Total Orders:** A bar chart highlighting the top 5 best-selling pizzas based on the total number of pizzas sold. This chart will help identify the most popular pizza options.
-- **Bottom 5 Worst Sellers by Revenue, Total Quantity, and Total Orders:** A bar chart showcasing the bottom 5 worst-selling pizzas based on the total number of pizzas sold. This chart will enable us to identify underperforming or least popular pizza options.
-
-Here is a compiled view of all the SQL queries and results: https://docs.google.com/document/d/1O38arRJ8Qg8p7C7Id6iW-OeZcZbarpexl50xhM5lIic/edit?usp=sharing
+- **Average Pizzas Per Order:** The average number of pizzas sold per order, calculated by dividing the total number of pizzas sold by the total number of orders.
 
 ## Executive Summary
 ### Overview of Findings (KPIs)
 In this analysis, the company’s total revenue was evaluated, revealing a resounding $978,475 for the year in review. The overall average order value (AOV) was $45.8. 59312 pizzas were sold that year and 21350 total orders were made. 2.8 average pizzas were made per order.
 
+Here is a compiled view of all the SQL queries and results: https://docs.google.com/document/d/1O38arRJ8Qg8p7C7Id6iW-OeZcZbarpexl50xhM5lIic/edit?usp=sharing
+
+## Visualizations (As displayed on the Power BI dashboard among the project files)
+Part of the task is to visualize various aspects of our pizza sales data to gain insights and understand key trends: The following charts have been identified:
+- **Daily Trend for Total Orders:** A bar chart that displays the daily trend of total orders over a specific time period. This chart will help identify any patterns or fluctuations in order volumes on a daily basis.
+- **Monthly Trend for Total Orders:** A line chart that illustrates the monthly trend of total orders throughout the year. This chart will allow us identify peak months or periods of high order activity. 
+- **Percentage of Sales by Pizza Category:** A pie chart that shows the distribution of sales across different pizza categories. This chart will provide insights into the popularity of various pizza categories and their contribution to overall sales. 
+- **Percentage of Sales by Pizza Size:** A pie chart that represents the percentage of sales attributed to different pizza sizes. This chart will help us understand customer preferences for pizza sizes and their impact on sales. 
+- **Total Pizzas Sold by Pizza Category:** A funnel chart that presents the total number of pizzas sold for each pizza category. This chart will allows us to compare the sales performance of different pizza categories.
+- **Top 5 Best Sellers by Revenue, Total Quantity, and Total Orders:** A bar chart highlighting the top 5 best-selling pizzas based on the total number of pizzas sold. This chart will help identify the most popular pizza options.
+- **Bottom 5 Worst Sellers by Revenue, Total Quantity, and Total Orders:** A bar chart showcasing the bottom 5 worst-selling pizzas based on the total number of pizzas sold. This chart will enable us to identify underperforming or least popular pizza options.
+
 ## Insights Deep Dive
-### 1. Revenue Growth Rate Analysis:
+### 1. Busiest Days & Times:
+- **Daily:** The company experiences a gradual rise in orders towards the end of the week. Orders are highest on Friday with approx. 3.5k orders, followed by Saturday and Thursday with 3.2k orders each. Sunday has the least orders with 2.6k.
+  
+- **Monthly:** July leads the way with 1935 orders followed by May (1853 orders) and then January (1845 orders). October (1646), September (1661), December (1680), and February (1685) have the lowest orders.
 
-* The company experienced a negative revenue growth of -0.84% from 2021 to 2022, followed by a recovery of 1.38% growth from 2022 to 2023. This suggests that efforts to drive sales were successful after a minor dip in 2021.
-  
-* Seasonal promotions or loyalty programs may have contributed to revenue stability despite fluctuations in market demand. However, continuous focus is needed to maintain growth.
-  
-### 2. Customer Segmentation (Loyalty vs. Non-Loyalty):
+### 2. Sales Performance:
+- **Category:** Classic pizza category contributes to maximum sales and total pizzas sold with 26.81% of total sales/revenue and 17764 pizzas sold. Veggie pizzas have the least sales by a slight margin with 23.79% of total sales while chicken pizzas had the least number sold with 13217.
 
-* The overall Average Order Value (AOV) was 96.13, with loyalty members having a slightly higher AOV (96.62) compared to non-loyalty members (96.00). This suggests that loyalty programs are effective in increasing customer spend but may need more aggressive engagement strategies to widen the gap.
-  
-* Loyalty members convert more effectively through marketing channels like Email (48.08% conversion rate) and Social Media (47.62%), emphasizing the importance of nurturing long-term relationships via personalized communication.
+- **Size:** Large size pizzas were most popular contributing a stunning 46.01% of total sales, followed by Medium at 30.36%. XX-Large and X-Large sized pizzas were the least popular with 0.12% and 1.7% respectively.
 
-### 3. Marketing Channel Performance:
-* Email marketing drove the highest revenue of $2.91M, closely followed by Social Media with $2.87M. Paid Search contributed the lowest revenue ($962K), indicating potential underperformance that may warrant further investigation.
-  
-* In terms of total orders, Email and Social Media also had the highest volumes, reaffirming their value as key marketing channels. Paid Search and Referral channels had significantly lower orders, impacting overall revenue generation.
-  
-* Loyalty customer acquisition was highest through Email (48.08%) and Social Media (47.62%). Paid Search, while cost-intensive, had the lowest loyalty conversion rate (28.23%).
 
-### 4. Refund Rate by Product Category:
-* The overall refund rate stood at 5.02%, with Groceries and Health & Beauty products having the highest refund rates at 5.19% and 5.14%, respectively. Operational issues in these categories, such as product quality or delivery timelines, could be contributing factors.
+### 3. Best/Worst Sellers:
+- **Revenue:** The Thai Chicken pizza and Barbecue Chicken pizza contributed the most to revenue with approx. $51k eazh while The Brie Carre pizza contributed the least with $14k.
   
-* Electronics had the lowest refund rate (4.77%), suggesting better quality control or customer satisfaction in this category.
-    
+- **Quantity:** The Barbecue Chicken pizza and The Pepperoni pizza sold the most in number with 2923 units sold each while The Brie Carre pizza sold the least with 588 sold.
+  
+- **Total Orders:** The Classic Deluxe pizza was ordered the most times (2329 orders) while The Brie Carre pizza was ordered the least (480 orders).
+
+
 ## Recommendations:
-Based on the insights and findings, the following recommendations are provided:
+The following recommendations are based on the insights and findings:
 
-* Increase Focus on Loyalty Programs: The marginal difference in AOV between loyalty and non-loyalty customers suggests that current loyalty initiatives could be enhanced. Additional rewards or exclusive deals may help drive higher spending from loyalty customers.**
+### 1. Marketing Strategies for Peak Periods
+**Focus Marketing Efforts on Fridays and Weekends:** Since the busiest days for orders are Thursday, Friday, and Saturday, special promotions and marketing campaigns should be concentrated around these days to maximize revenue. For instance, offering "Buy One Get One Free" or discounts on popular pizzas can drive even more sales.
 
-* Optimize Paid Search Strategy: Since Paid Search is underperforming in both revenue generation and customer acquisition, a strategic review is necessary. Consider reducing investment in Paid Search or experimenting with new ad copy and targeting strategies.**
+**Off-Peak Day Promotions:** With Sunday being the least busy day, the company could introduce targeted promotions such as "Sunday Family Deals" to encourage more orders on that day, potentially boosting overall weekly sales.
 
-* Improve Operations for Groceries and Health & Beauty: The higher refund rates in these categories indicate potential issues with product quality or delivery service. Streamlining fulfillment processes and enhancing quality checks could help reduce refunds.**
+### 2. Seasonal Campaigns Based on Monthly Trends
+**Boost Sales in Low-Performing Months:** The months with the lowest number of orders (October, September, December, and February) could benefit from holiday or seasonal promotions to attract more customers. For example, introducing themed pizzas for holidays or offering special deals during these months may help increase sales.
 
-* Leverage High-Performing Channels: Email and Social Media channels are delivering the best results in terms of revenue and loyalty acquisition. Continue to invest in these channels, with a focus on personalization and customer engagement to drive further growth.**
+**Capitalize on High-Performing Months:** July, May, and January are the highest-performing months in terms of orders. Enhancing marketing during these months with special campaigns or launching new pizza flavors could further boost sales during these peak periods.
 
-  
+### 3. Product Line Optimization
+**Focus on Popular Sizes:** Since large-sized pizzas account for the largest share of sales (46.01%), the company should prioritize this size in promotions and bundle deals. Offering meal packages that include large pizzas with sides could encourage larger orders and higher average order values.
+
+**Reevaluate Low-Performing Sizes:** XX-Large and X-Large sizes are the least popular, contributing only a small fraction of sales. The company could consider discontinuing these sizes to reduce inventory costs or experiment with limited-time promotions to test whether demand can be increased.
+
+### 4. Menu Adjustments
+**Expand the Classic Pizza Category:** As the classic pizzas are the most popular (26.81% of total sales), expanding this category with additional flavors or seasonal variations could cater to customer preferences and potentially boost sales.
+
+**Reposition or Remove Low-Performing Pizzas:** The Brie Carre pizza, being the lowest in both revenue and quantity sold, could be repositioned as a "gourmet" offering at a premium price or replaced with a new pizza that aligns more closely with customer tastes.
+
+**Promote Top-Selling Pizzas:** With Thai Chicken and Barbecue Chicken pizzas contributing the most to revenue, and Pepperoni and Barbecue Chicken pizzas selling the most in quantity, the company should feature these pizzas in its marketing campaigns and consider combo deals featuring these popular choices.
+
+## Conclusion
+These recommendations aim to optimize the company’s sales performance through targeted marketing strategies, product line adjustments, and seasonal campaigns. By focusing on data-driven insights, the company can capitalize on high-demand periods, improve the sales of less popular products, and maximize revenue potential.
 
 
 
